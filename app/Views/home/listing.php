@@ -160,7 +160,7 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize"></script>
 
 <script>
-    var locations = localStorage.setItem('locations', '<?= json_encode($kos) ?>')
+    var locations = JSON.parse(<?= json_encode($kos) ?>)
     var page = 1;
     var triggerScrollLoader = true;
     var isLoading = false;
